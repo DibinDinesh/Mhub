@@ -1,0 +1,139 @@
+scheme=movie
+attribute:title,year,director,run_time,language,genre,producer
+
+1)Api for listing all movies
+
+    url:localhost:8000/api/movies/
+
+    method:GET
+
+    body:nill
+
+    status:pending
+
+2)Api for creating a movies
+
+    url:localhost:8000/api/movies/
+
+    method:POST
+
+    body:{
+        "title":"movie title"
+        "year":"movie year"
+        "director":"movie director"
+        "run_time":"movie run_time"
+        "language":"movie language"
+        "genre":"movie genre"
+        "producer":"movie producer"
+
+    }
+
+    status:pending
+
+3)Api for updating a movies
+
+    url:localhost:8000/api/movies/{id}/
+
+    method:PUT
+
+    body:{
+        "title":"movie title"
+        "year":"movie year"
+        "director":"movie director"
+        "run_time":"movie run_time"
+        "language":"movie language"
+        "genre":"movie genre"
+        "producer":"movie producer"
+
+    }
+
+    status:pending
+
+4)Api for delete a movies
+
+    url:localhost:8000/api/movies/{id}/
+
+    method:DELETE
+
+    body:{
+        "title":"movie title"
+        "year":"movie year"
+        "director":"movie director"
+        "run_time":"movie run_time"
+        "language":"movie language"
+        "genre":"movie genre"
+        "producer":"movie producer"
+
+    }
+
+    status:pending
+
+5)Api for frtching a specific  movies
+
+    url:localhost:8000/api/movies/
+
+    method:GET
+
+    body:nill
+
+    status:pending
+
+
+Django rest framework
+step1)
+    install djangorestframework
+        >pip install djangorestframe
+step2) settings. py
+        installed_apps=[
+
+            "rest_franework"
+
+        ]
+
+step3)
+
+rest_framework>views.py> class APIView
+rest_framework>response.py>class response
+
+class MovieListCreateVieu(APIView) :
+
+    def get(self,request,*args,**kwargs):
+        // logic for returning all movies
+        //besponse class is responsible for converting python native type(list,set,tuple,dictionary)
+    return response(data={"messages":"movie list"})
+
+    def post(self, request,*args, **kwargs):
+        // logic for adding a new rmvie
+    return response(data={"messages":"movie create"})
+
+
+
+step3
+creating views
+class MovieListCreateView(APIView) :
+    def get(self,request, *args, **kwargs):
+        q s —Movie. objects. all()
+            // logic for returning all movies
+            //Response class is responsible for converting python native type
+            // (list, set, tuple, dictionart) to JSON
+        return Response "message" : "movie list"))
+    def post(self, request, *args, **kwargs):
+
+# query set to python native type (Serialization)
+#python native type queryset(l)
+
+
+
+new project
+employee( id , name , department , salary)
+task (id,title,description ,completion_date,assigned,employee_obj(fk))
+
+
+schema : review
+attributes : {id, comment, rating, user, created_date, album_object}
+api for add review
+
+----url=localhost:8000/api/albums/{id}/add_review/
+        metgod=post
+
+        body={comment,rating,user}

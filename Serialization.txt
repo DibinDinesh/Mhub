@@ -1,0 +1,21 @@
+Serialization
+============
+
+
+Serialization is the process Of converting from python native type to complex data type like queryset or viceverse
+
+#   PythonNative type to qs--deSerialization
+
+#   qs to pythonNative type--Serialization
+
+
+creating Serialization
+
+> yourapp > Serialization
+> api > Serialization.py
+----------------------------------------
+rest_framework > Serialization.py       
+                    class Serialization
+                    class modelSerialization
+------------------------------------------------
+from rest_framework import Serialization

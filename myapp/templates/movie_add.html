@@ -1,0 +1,64 @@
+
+{%extends 'base.html'%}
+
+{%block title_block%}
+
+    <title>Add_movie</title>
+
+{%endblock%}
+
+
+{%block main_block%}
+<div class="container">
+
+    <form action="" method="post" class="w-75 p-4 mx-auto border rounded shadow">
+        {{form.errors}}
+        {%csrf_token%}
+        <h3 class="text-center fw-bold" >Add New Movie</h3>
+
+        <div class="row mb-2">
+            <div class="col-6">
+                <label for="">Title</label>
+                {{form.title}}
+            </div>
+            <div class="col-6">
+                <label for="">Year</label>
+                {{form.year}}
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-6">
+                <label for="">RunTime</label>
+                {{form.run_time}}
+            </div>
+            <div class="col-6">
+                <label for="">Director</label>
+                {{form.director}}
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-6">
+                <label for="">Language</label>
+                {{form.language}}
+            </div>
+            <div class="col-6">
+                <label for="">Genre</label>
+                {{form.genre}}
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-12">
+                <label for="">Producer</label>
+                {{form.producer}}
+            </div>
+        </div>
+        <button type="submit"  class="btn btn-outline-info form-control">Add</button>
+
+        </div>
+
+
+
+    </form>
+</div>
+
+{%endblock%}
